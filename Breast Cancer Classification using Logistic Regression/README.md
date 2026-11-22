@@ -1,118 +1,63 @@
 # Breast Cancer Classification using Logistic Regression
 
-## 📌 Project Overview
-This project demonstrates a **binary classification** problem using **Logistic Regression** to predict whether a breast tumor is **malignant** or **benign** based on medical features.
+## Project Overview
+This project uses **Logistic Regression**, a supervised machine learning algorithm, to classify observations in the Breast Cancer Wisconsin dataset as **malignant** or **benign**.
 
-The project uses the **Breast Cancer Wisconsin Dataset** available in `scikit-learn` and includes:
-- Data loading
-- Feature scaling
-- Model training
-- Prediction
-- Model evaluation
-- Confusion matrix visualization
+It demonstrates a basic classification workflow, including data loading, train-test splitting, feature scaling, model training, prediction, and evaluation.
 
-This project is suitable for **beginners in Machine Learning** who have basic knowledge of **NumPy and Matplotlib**.
-
----
-
-## 📊 Dataset Information
+## Dataset
 - Source: `sklearn.datasets.load_breast_cancer`
-- Number of samples: 569
-- Number of features: 30
-- Target classes:
-  - `0` → Malignant
-  - `1` → Benign
+- Samples: 569
+- Features: 30 numerical features
+- Classes: malignant and benign
 
----
-
-## 🛠️ Technologies Used
+## Technologies
 - Python
-- NumPy
 - Pandas
 - Matplotlib
+- Seaborn
 - Scikit-learn
 
----
-
-## 🧠 Machine Learning Concepts Used
-- Binary Classification
+## Machine Learning Concepts
+- Binary classification
 - Logistic Regression
-- Train-Test Split
-- Feature Scaling (StandardScaler)
-- Model Evaluation
-- Confusion Matrix
+- Train-test split with stratification
+- Feature scaling using `StandardScaler`
+- Accuracy, classification report, and confusion matrix
 
----
+## Workflow
+1. Load the Breast Cancer Wisconsin dataset from Scikit-learn.
+2. Explore the dataset and feature columns.
+3. Split the data into training and test sets (80:20), using stratification.
+4. Fit `StandardScaler` on the training data and transform both training and test data.
+5. Train a Logistic Regression model.
+6. Generate predictions for the test set.
+7. Evaluate the model using accuracy, a classification report, and a confusion matrix.
 
+## Results
+- **Test accuracy: 98.25%**
+- **Test samples: 114**
+- **Confusion matrix:**
+  ```text
+  [[41  1]
+   [ 1 71]]
+  ```
 
----
+The matrix uses the class order malignant, benign. The model correctly classified 41 malignant and 71 benign samples in this test split, with one misclassification in each class.
 
-## ⚙️ Implementation Steps
+## Run the Notebook
+1. Clone this repository.
+2. Install the required packages: `pandas`, `matplotlib`, `seaborn`, and `scikit-learn`.
+3. Open `Project_2.ipynb` in Jupyter Notebook or JupyterLab.
+4. Run the cells in order.
 
-### 1️⃣ Import Libraries
-Essential libraries for numerical computation, visualization, and machine learning are imported.
+## Learning Outcomes
+- Understanding binary classification
+- Applying feature scaling without fitting on test data
+- Training a Logistic Regression model
+- Evaluating classification performance
 
-### 2️⃣ Load Dataset
-The Breast Cancer dataset is loaded directly from `scikit-learn`.
-
-### 3️⃣ Split Data
-The dataset is split into training and testing sets to evaluate model performance fairly.
-
-### 4️⃣ Feature Scaling
-`StandardScaler` is used to normalize features so that all values are on the same scale.
-
-### 5️⃣ Model Training
-A **Logistic Regression** model is trained using the scaled training data.
-
-### 6️⃣ Prediction
-The trained model predicts the class labels for the test dataset.
-
-### 7️⃣ Model Evaluation
-Model performance is evaluated using:
-- Accuracy Score
-- Classification Report
-- Confusion Matrix
-
-### 8️⃣ Confusion Matrix Visualization
-The confusion matrix is visualized using `matplotlib` to clearly understand correct and incorrect predictions.
-
----
-
-## 📈 Confusion Matrix Explanation
-- **Rows** represent actual labels
-- **Columns** represent predicted labels
-- Diagonal values indicate correct predictions
-- Off-diagonal values indicate misclassifications
-
----
-
-## ✅ Results
-The Logistic Regression model achieves **high accuracy**, showing that it is effective for this binary classification task.
-
----
-
-## 🚀 How to Run the Project
-1. Clone the repository
-2. Open the notebook `Project_2.ipynb`
-3. Run all cells sequentially
-
----
-
-## 📌 Learning Outcome
-By completing this project, you will understand:
-- How classification problems work
-- Why feature scaling is important
-- How Logistic Regression makes predictions
-- How to evaluate a machine learning model
-- How to visualize results effectively
-
----
-
-## 👤 Author
+## Author
 **Suchaita Halder**
 
----
-
-## 📜 License
-This project is for educational purposes.
---- 
+> **Disclaimer:** This is an educational machine learning project using a public dataset. It is not a medical device and must not be used for diagnosis or treatment decisions.
