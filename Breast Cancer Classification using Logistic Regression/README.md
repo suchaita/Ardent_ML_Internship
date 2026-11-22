@@ -109,7 +109,7 @@ By completing this project, you will understand:
 ---
 
 ## 👤 Author
-**Your Name Here**
+**Suchaita Halder**
 
 ---
 
